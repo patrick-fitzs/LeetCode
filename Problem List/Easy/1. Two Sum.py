@@ -20,9 +20,9 @@ class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         map = {}
         for i, num in enumerate(nums):
-            comliment_num = target - num
-            if comliment_num in map:
-                return [map[comliment_num], i]
+            compliment_num = target - num
+            if compliment_num in map:
+                return [map[compliment_num], i]
             map[num] = i
 
 
