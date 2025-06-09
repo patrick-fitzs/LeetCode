@@ -20,6 +20,7 @@ class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         map = {}
         for i, num in enumerate(nums):
+            print(i, num)
             complement_num = target - num
             if complement_num in map:
                 return [map[complement_num], i]
