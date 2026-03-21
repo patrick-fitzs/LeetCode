@@ -4,10 +4,16 @@ https://leetcode.com/problems/maximum-performance-of-a-team/description/
 
 import heapq
 
-def maxTeamPerformance(n, speed, efficiency, k):
+
+def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
+    # n=             6
+    # speed =        [2, 10, 3, 1, 5, 8]
+    # efficiency =   [5, 4 , 3, 9, 7, 2]
+    # k=             2
     teams = list(zip(efficiency, speed))
     teams.sort(reverse=True)
-
+    #  e,s   e,s   e,s   e,s    e,s   e,s
+    # so we have [(9,1),(7,5),(5,2),(4,10),(3,3),(2,8)] e, s . . . .
     heap = []
     speed_sum = 0
     best = 0
@@ -21,9 +27,7 @@ def maxTeamPerformance(n, speed, efficiency, k):
 
         best = max(best, speed_sum * e)
 
-    return best % (10**9 + 7)
-
-
+    return best % (10 ** 9 + 7)
 
 
 n = 6
