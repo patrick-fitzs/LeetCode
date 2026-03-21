@@ -2,7 +2,30 @@
 You are climbing a staircase. It takes n steps to reach the top.
 
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+if we have 1 steps you can do 1 = 1
+if we have 2 steps you can do 1+1 or 1 = 2
+if we have 3 steps you can do 1+1+1, 1+2, 2+1 = 3
+if we have 4 steps you can do 1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2 = 5
+
+Notice how this is just the fibonacci sequence?
 """
+
+
+# updated with a more efficient olution Space is O(1) and time is O(n)
+
+class Solution1:
+    def climbStairs(self, n: int) -> int:
+        one, two = 1,2
+
+        for i in range(n-1):
+            temp = one
+            one = one+two
+            two = temp
+
+        return one
+
+
 
 class Solution:
     def climbStairs(self, n: int) -> int:
