@@ -5,7 +5,7 @@ https://leetcode.com/problems/maximum-performance-of-a-team/description/
 import heapq
 
 
-def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
+def maxPerformance(n, speed, efficiency, k) -> int:
     # n=             6
     # speed =        [2, 10, 3, 1, 5, 8]
     # efficiency =   [5, 4 , 3, 9, 7, 2]
@@ -35,4 +35,4 @@ speed = [2, 10, 3, 1, 5, 8]
 efficiency = [5, 4, 3, 9, 7, 2]
 k = 2
 
-print(maxTeamPerformance(n, speed, efficiency, k))
+print(maxPerformance(n, speed, efficiency, k))
