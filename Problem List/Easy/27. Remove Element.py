@@ -1,7 +1,7 @@
 """
 https://leetcode.com/problems/remove-element/
 
-So we need to count occurences of k in a list called nums
+So we need to count occurrences of k in a list called nums
 
 so we iterate, does i == val? if not skip
                does i+1 == value? yes so counter++
