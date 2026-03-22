@@ -17,20 +17,26 @@ e.g. 9+1=10
             3*3=9, is this 9? YES
 
 """
+
+
 def mySqrt(x):
-    if x < 2:
-        return x
+    if x < 2: return x
 
-    #initiate binary search from here
     left, right = 1, x //2
-    while left <= right:
-        mid = (left + right) // 2
 
-        if mid * mid == x:
+    while left <= right:
+        mid = (left + right) //2
+        square = mid * mid
+
+        if square == x:
             return mid
-        elif mid * mid < x:
+        elif square < x:
             left = mid + 1
         else:
-            right = mid - 1
+            right = mid -1
 
     return right
+
+
+print(mySqrt(9))
+print(mySqrt(4))
