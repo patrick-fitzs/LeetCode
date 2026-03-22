@@ -36,6 +36,8 @@ A building list of solutions for LeetCode problems.
 - 6 - Zigzag Conversion.
 - 7 - Reverse Integer.
 - 437 - Path Sum III.
+- 958 - Check Completeness of a Binary Tree
+- 1297 - Maximum Number of Occurrences of a Substring
 - 1760 - Minimum Limit of Balls in Bag.
 - 2954 - Minimum Time to Repair Cars.
 
