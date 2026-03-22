@@ -1,6 +1,11 @@
 """
 https://leetcode.com/problems/valid-parentheses/description/
-
+Input: s = "()[]{}"
+we run through the iterations ,
+check is '(' in things? YES -> push to stack
+check is ')' in things? NO -> go to else:
+            -> if not stack (is stack empty) or things[stack.pop()] !=ch (do they match?)
+            if they stack is not empty and pop matched, next iteration
 
 """
 
