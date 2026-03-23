@@ -43,6 +43,7 @@ A building list of solutions for LeetCode problems.
 
 ## Hard
 - 4 - Median of Two Sorted Arrays.
+- 214 - Shortest Palindrome.
 - 857 - Minimum Cost to Hire K Workers.
 - 1383 - Maximum Performance of a Team.
 
