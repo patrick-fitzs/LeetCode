@@ -20,8 +20,18 @@ Output: 2
 # then the halfway point must be that majority element
 class Solution:
     def majorityElement(self, nums: list[int]) -> int:
-        nums.sort()
-        return nums[len(nums) // 2]
+        # below is O(n log n) due to sort function
+        # nums.sort()
+        # return nums[len(nums) // 2]
+        candidate = None
+        count = 0
+
+        for num in nums:
+            if count == 0:
+                candidate = num
+            count += 1 if candidate == num else - 1
+
+        return candidate
 
 
 print(Solution().majorityElement([3,2,3]))
