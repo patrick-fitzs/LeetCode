@@ -28,6 +28,7 @@ A building list of solutions for LeetCode problems.
 - 387 - First Unique Character in a String.
 - 392 - Is Subsequence.
 - 977 - Squares in a Sorted Array.
+- 2351 - First Letter to Appear Twice
 - 2769 - Find the maximum achievable number.
 - 
 ## Medium
