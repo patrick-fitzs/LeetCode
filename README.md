@@ -24,6 +24,7 @@ A building list of solutions for LeetCode problems.
 - 125 - Valid Palindrome.
 - 169 - Majority Element.
 - 205 - Isomorphic Strings.
+- 242 - Valid Anagram
 - 383 - Ransom Note.
 - 387 - First Unique Character in a String.
 - 392 - Is Subsequence.
