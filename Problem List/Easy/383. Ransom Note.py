@@ -27,15 +27,20 @@ Output: true
 
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        mapz = {}
+        dictionary = {}
 
         for char in magazine:
-            mapz[char] = 1 + mapz.get(char, 0)
+            if char not in dictionary:
+                dictionary[char] = 1
+            else:
+                dictionary[char] += 1
 
-        for i in ransomNote:
-            if i not in mapz or mapz[i] <= 0:
+        for char in ransomNote:
+            if char in dictionary and dictionary[char] > 0:
+                dictionary[char] -= 1
+            else:
                 return False
-            mapz[i] -= 1
 
         return True
 
+print(Solution().canConstruct('aa', 'aab'))

@@ -24,3 +24,4 @@ class Solution:
 
 sol = Solution()
 print(sol.containsDuplicate([1,2,3,1]))
+print(Solution().containsDuplicate([1, 2, 3, 4]))
