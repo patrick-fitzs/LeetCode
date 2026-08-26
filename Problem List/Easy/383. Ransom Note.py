@@ -22,8 +22,8 @@ Output: true
 """
 
 # Using a map here to store each character of magazine with char total.
-# We then run through each letter in the note and if we find it in the map we subtract it
-# if it's not in the map, or we've used all the chars, return False and stop program
+# We then run through each letter in the ransomNote and if we find it in the map we subtract it
+# if it's not in the map, or we've used all the chars, return False and stop 
 
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:

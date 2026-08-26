@@ -14,7 +14,30 @@ class Solution:
         # t = sorted(t)
         # return s == t
 
-        counter_s = Counter(s)
-        counter_t = Counter(t)
-        return counter_s == counter_t
+        # easy method
+        #counter_s = Counter(s)
+        #counter_t = Counter(t)
+        #return counter_s == counter_t
+
+            # or you can do
+        countChars = {}
+
+        for letter in s:
+            if letter not in countChars:
+                countChars[letter] = 1
+            else:
+                countChars[letter] += 1
+
+        for letter in t:
+            if letter in countChars and countChars[letter] > 0:
+                countChars[letter] -= 1
+
+            else:
+                return False
+
+        return True
+
+
+print(Solution().isAnagram("anagram", "nagaram"))
+
 
