@@ -20,6 +20,11 @@ class Solution:
         #return counter_s == counter_t
 
             # or you can do
+
+        if len(s) != len(t):
+            return False
+
+
         countChars = {}
 
         for letter in s:
