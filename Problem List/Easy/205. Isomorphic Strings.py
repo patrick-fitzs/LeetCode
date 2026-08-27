@@ -55,4 +55,4 @@ class Solution:
 
         return True
 
-print(Solution().isIsomorphic("egg", "add"))
+print(Solution().isIsomorphic("egg", "add"))  # worked out and submitted again
