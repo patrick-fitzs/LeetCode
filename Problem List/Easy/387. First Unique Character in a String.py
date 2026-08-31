@@ -6,14 +6,19 @@ We have a string s and need to find the first non repeating character, else retu
 create a map with counters, iterate and return the index where counts[ch]==1
 """
 
-
 import collections
+
+
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        counter = collections.Counter(s)
 
-        for index, chr in enumerate(s):
-            if counter[chr] == 1:
+        # start with a hash map with counters
+        counts = collections.Counter(s)
+
+        # iterate over each index(letter) of s with its letter(value)
+        for index, value in enumerate(s):
+            # if the counts value of the current value is 1, return it as its the first unique
+            if counts[value] == 1:
                 return index
 
         return -1
