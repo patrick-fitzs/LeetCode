@@ -10,14 +10,24 @@ Literally the intersection of a set
 
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        s1 = set(nums1) # get rid of dupes
+        # nums1 = set(nums1)
+        # result = []
+        #
+        #
+        # for i in range(len(nums2)):
+        #     if nums2[i] in nums1 and nums2[i] not in result:
+        #         result.append(nums2[i])
+        #
+        # return result
 
-        result = [] # store results here to return
+        set1 = set(nums1) # get rid of dupes
+        result = []
 
         for num in nums2:
-            if num in s1:
+            if num in set1:
                 result.append(num)
-                s1.remove(num)
+                set1.remove(num)
+
 
         return result
 
