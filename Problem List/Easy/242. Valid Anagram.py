@@ -19,27 +19,37 @@ class Solution:
         #counter_t = Counter(t)
         #return counter_s == counter_t
 
-            # or you can do
 
+
+
+
+            # or you can do
+        # edge case for character length checker
         if len(s) != len(t):
             return False
 
+        # our counter
+        charCounter = {}
 
-        countChars = {}
-
+        # add new letters and assign count of 1
         for letter in s:
-            if letter not in countChars:
-                countChars[letter] = 1
+            if letter not in charCounter:
+                charCounter[letter] = 1
+            # if they already exist, add 1
             else:
-                countChars[letter] += 1
+                charCounter[letter] += 1
 
+        # compare t, they letter from t is in our couter, subtract
         for letter in t:
-            if letter in countChars and countChars[letter] > 0:
-                countChars[letter] -= 1
+            if letter in charCounter and charCounter[letter] > 0:
+                charCounter[letter] -= 1
+
+            # if its not, return false
 
             else:
                 return False
 
+            # letters from t matched s, so a valid anagram
         return True
 
 
