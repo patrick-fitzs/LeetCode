@@ -20,6 +20,7 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+
         seen = {}
 
         for i, num in enumerate(nums):
@@ -28,6 +29,22 @@ class Solution:
             if comp_num in seen:
                 return seen[comp_num], i
             seen[num] = i
+
+print(Solution().twoSum([2, 7, 11, 15], 9))
+
+
+
+
+
+
+        # seen = {}
+        #
+        # for i, num in enumerate(nums):
+        #     comp_num = target - num
+        #
+        #     if comp_num in seen:
+        #         return seen[comp_num], i
+        #     seen[num] = i
 ''' 
  This is what iterations look like
     0, 1, 2, 3
@@ -38,4 +55,3 @@ class Solution:
     {2: 0, } - added from the first iteration seen{} num which is 2 so seen{2:} = 0 so seen{2:0}
     return {0, 1}
 '''
-print(Solution().twoSum([2, 7, 11, 15], 9))
