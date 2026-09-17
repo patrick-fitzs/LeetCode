@@ -11,7 +11,7 @@ from typing import List
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
-        # create a set with seen so we avoid duplicates
+        # create a set so we have instant O(1) lookups
         seen = set()
         for i in nums:
             if i in seen:
